@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Zirap-Hoodiez</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../imagenes/zirapgrafitti-removebg-preview.png" type="image/png">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+      <h1>
+        <img src="../imagenes/ziraplogo3-removebg-preview.png" alt="Zirap-Hoodiez" class="logo">
+      </h1>
+
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <nav id="main-nav">
+        <ul>
+           <li> <a href="../html/zirap hoodiez maquerta.html">Inicio</a></li>
+          <li><a href="../html/hoodiez.html">Hoodies</a></li>
+          <li><a href="../html/chamarras.html">Chamarras</a></li>
+          <li><a href= "../html/Pantalones.html">Pantalones</a></li>
+          <li><a href="../html/accesorioz.html">Accesorios</a></li>
+          <li><a href="../html/contacto.html">Contacto</a></li>
+          <li><a href="../html/iniciarsesion.html">Iniciar Sesion</a></li>
+             <li><a href="../html/PAGO.html">Pago</a></li>
+          <li><a href="../html/Carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="form-container">
+    <h1 class="title">Crea tu cuenta</h1>
+    <form action="register.php" method="POST" class="form">
+      <div class="input-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+      </div>
+
+      <div class="input-group">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Elige un nombre de usuario" required>
+      </div>
+
+      <div class="input-group">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Crea una contraseña" required>
+      </div>
+
+      <button type="submit" class="btn">Registrarme</button>
+      <p class="alt-text">¿Ya tienes cuenta? <a href="../html/iniciarsesion.html">Inicia sesión</a></p>
+      <button type="submit" class="btn"><a href="../html/zirap hoodiez maquerta.html">Regresar</a></button>
+      
+    </form>
+  </div>
+</body>
+</html>

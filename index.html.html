@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zirap-Hoodiez</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="icon" href="../imagenes/zirapgrafitti-removebg-preview.png" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>
+        <img src="../imagenes/ziraplogo3-removebg-preview.png" alt="Zirap-Hoodiez" class="logo">
+      </h1>
+
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="../html/hoodiez.html">Hoodies</a></li>
+          <li><a href="../html/chamarras.html">Chamarras</a></li>
+          <li><a href= "../html/Pantalones.html">Pantalones</a></li>
+          <li><a href="../html/accesorioz.html">Accesorios</a></li>
+          <li><a href="../html/contacto.html">Contacto</a></li>
+          <li><a href="../html/Registrarse.html">Registrarse</a></li>
+          <li><a href="../html/iniciarsesion.html">Iniciar Sesion</a></li>
+          <li><a href="../html/Carrito.html">Carrito</a></li>
+          <li><a href="../html/PAGO.html">Pago</a></li>
+          <li><a href="../html/listdedesesos.html">Lista de deseos</a></li>
+          <button id="modoToggle">Modo</button>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <main>
+    <section class="bienvenida">
+      <h2>Bienvenido a Zirap-Hoodiez</h2>
+      <p>Explora nuestras sudaderas.</p>
+    </section>
+
+    <h2>Nuestros Modelos Más Destacados</h2>
+
+    <section id="modelos-section">
+      <div class="model-card">
+        <img src="../imagenes/cre.jpg" alt="Sudaderas con cremallera" />
+        <h3>Sudaderas con cremallera</h3>
+        <ul>
+          <li>Fácil de poner y quitar</li>
+          <li>Versatilidad</li>
+          <li>Comodidad</li>
+          <li>Precio: $1,500</li>
+        </ul>
+      </div>
+
+      <div class="model-card">
+        <img src="../imagenes/crew.webp" alt="Crewneck" />
+        <h3>Sudaderas Crewneck</h3>
+        <ul>
+          <li>Cuello redondo</li>
+          <li>Diseño versátil</li>
+          <li>Unisex</li>
+          <li>Precio: $750</li>
+        </ul>
+      </div>
+
+      <div class="model-card">
+        <img src="../imagenes/clasica.webp" alt="Clásica" />
+        <h3>Sudaderas clásicas</h3>
+        <ul>
+          <li>Diseño simple</li>
+          <li>Cuello redondo o con capucha</li>
+          <li>Manga larga</li>
+          <li>Precio: $590</li>
+        </ul>
+      </div>
+
+      <div class="model-card">
+        <img src="../imagenes/capucha.jpg" alt="Capucha" />
+        <h3>Sudaderas con capucha</h3>
+        <ul>
+          <li>Capucha ajustable</li>
+          <li>Bolsillo tipo canguro</li>
+          <li>Comodidad y abrigo</li>
+          <li>Precio: $999</li>
+        </ul>
+      </div>
+
+      <div class="model-card">
+        <img src="../imagenes/hippie.jpg" alt="Hippie" />
+        <h3>Hippie Hoodies</h3>
+        <ul>
+          <li>Material grueso y rústico</li>
+          <li>Diseños artesanales</li>
+          <li>Estilo unisex</li>
+          <li>Precio: $1390</li>
+        </ul>
+      </div>
+
+      <div class="model-card">
+        <img src="../imagenes/rom.jpg" alt="Rompevientos" />
+        <h3>Rompevientos</h3>
+        <ul>
+          <li>Tejido delgado</li>
+          <li>Resistente al viento</li>
+          <li>Corte deportivo</li>
+          <li>Precio: $249.00</li>
+        </ul>
+      </div>
+
+      <div class="model-card">
+        <img src="../imagenes/over.jpg" alt="Oversize" />
+        <h3>Oversize</h3>
+        <ul>
+          <li>Diseño amplio</li>
+          <li>Libertad de movimiento</li>
+          <li>Estilo juvenil</li>
+          <li>Precio: $790</li>
+        </ul>
+      </div>
+
+      <div class="model-card">
+        <img src="../imagenes/front.jpg" alt="Frontal" />
+        <h3>Cierre Frontal</h3>
+        <ul>
+          <li>Cierre de cremallera</li>
+          <li>Mayor versatilidad</li>
+          <li>Comodidad</li>
+          <li>Precio: $1499</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Zirap-Hoodiez 2025</p>
+  </footer>
+
+ <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('main-nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+  </script>
+  <script src="../js/modo.js"></script>
+</body>
+</html>

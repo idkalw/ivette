@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catálogo - Zirap-Hoodiez</title>
+  <link rel="stylesheet" href="../css/h.css">
+  <link rel="icon" href="../imagenes/zirapgrafitti-removebg-preview.png" type="image/x-icon" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>
+        <img src="../imagenes/ziraplogo3-removebg-preview.png" alt="Zirap-Hoodiez"> 
+      </h1>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <nav id="nav-menu">
+          <ul>
+          <li> <a href="../html/zirap hoodiez maquerta.html">Inicio</a></li>
+          <li><a href="../html/hoodiez.html">Hoodies</a></li>
+          <li><a href="../html/chamarras.html">Chamarras</a></li>
+
+          <li><a href="../html/accesorioz.html">Accesorios</a></li>
+          <li><a href="../html/contacto.html">Contacto</a></li>
+          <li><a href="../html/Registrarse.html">Registrarse</a></li>
+          <li><a href="../html/iniciarsesion.html">Iniciar Sesion</a></li>
+             <li><a href="../html/PAGO.html">Pago</a></li>
+             <li><a href="../html/listdedesesos.html">Lista de deseos</a></li>
+          <li><a href="../html/Carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="catalog">
+      <!-- ITEM 1 -->
+      <article class="card">
+        <div class="badge">Nuevo</div>
+        <div class="img-wrap">
+          <img src="../imagenes/baggy.jpg" alt="Hoodie 1 - Azul clásico">
+        </div>
+        <h3>Baggy jeans</h3>
+        <div class="meta">
+          <div class="price">$749</div>
+          <div class="tag">Unisex</div>
+        </div>
+        <p class="desc">Corte relajado, algodón peinado, cierre metálico y capucha ajustable.</p>
+        <div class="actions">
+          <button class="btn btn-view">Ver</button>
+          <button class="btn btn-buy">Comprar</button>
+          <button onclick="agregarAlCarrito('Hoodie Classic Zip', 749)">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <!-- ITEM 2 -->
+      <article class="card">
+        <div class="img-wrap">
+          <img src="../imagenes/slim fit.jpg" alt="Hoodie 2 - Blue back">
+        </div>
+        <h3>Slim Fit</h3>
+        <div class="meta">
+          <div class="price">$699</div>
+          <div class="tag">Edición</div>
+        </div>
+        <p class="desc">Silhouette oversize, tejido grueso y logo bordado en espalda.</p>
+        <div class="actions">
+          <button class="btn btn-view">Ver</button>
+          <button class="btn btn-buy">Comprar</button>
+          <button onclick="agregarAlCarrito('Crew Urban Blue', 699)">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <!-- ITEM 3 -->
+      <article class="card">
+        <div class="badge">Limitado</div>
+        <div class="img-wrap">
+          <img src="../imagenes/cargp.jpg" alt="Hoodie Especial">
+        </div>
+        <h3>Cargo</h3>
+        <div class="meta">
+          <div class="price">$1200</div>
+          <div class="tag">Edición Limitada</div>
+        </div>
+        <p class="desc">Pieza exclusiva con detalles únicos.</p>
+        <div class="actions">
+          <button class="btn btn-view">Ver</button>
+          <button class="btn btn-buy">Comprar</button>
+          <button onclick="agregarAlCarrito('Hoodie Especial', 1200)">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <!-- ITEM 4 -->
+      <article class="card">
+        <div class="img-wrap">
+          <img src="../imagenes/recto.jpg" alt="Nike Sportswear">
+        </div>
+        <h3>Rectos</h3>
+        <div class="meta">
+          <div class="price">$2125</div>
+          <div class="tag">Prenda Femenina</div>
+        </div>
+        <p class="desc">Pantalones comodos.</p>
+        <div class="actions">
+          <button class="btn btn-view">Ver</button>
+          <button class="btn btn-buy">Comprar</button>
+          <button onclick="agregarAlCarrito('Nike Sportswear Windrunner', 2125)">Agregar al carrito</button>
+        </div>
+      </article>
+
+       <!-- ITEM 5 -->
+      <article class="card">
+        <div class="img-wrap">
+          <img src="../imagenes/IMG-20251030-WA0125.jpg" alt="Nike Sportswear">
+        </div>
+        <h3>Baggy Jeans</h3>
+        <div class="meta">
+          <div class="price">$2125</div>
+          <div class="tag">Baggy Jeans</div>
+        </div>
+        <p class="desc">Pantalones Anchos</p>
+        <div class="actions">
+          <button class="btn btn-view">Ver</button>
+          <button class="btn btn-buy">Comprar</button>
+          <button onclick="agregarAlCarrito('Nike Sportswear Windrunner', 2125)">Agregar al carrito</button>
+        </div>
+      </article>
+    </section>
+
+    <a href="../html/Carrito.html" class="btn-carrito">🛒 Ver Carrito</a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+
+    function agregarAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.push({ nombre, precio });
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      alert(nombre + " fue agregado al carrito ✅");
+    }
+  </script>
+</body>
+</html>

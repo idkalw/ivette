@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Zirap Hoodiez</title>
+  <link rel="stylesheet" href="../css/idk.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+      <h1>
+        <img src="../imagenes/ziraplogo3-removebg-preview.png" alt="Zirap-Hoodiez" class="logo">
+      </h1>
+
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <nav id="main-nav">
+        <ul>
+          <li> <a href="../html/zirap hoodiez maquerta.html">Inicio</a></li>
+          <li><a href="../html/hoodiez.html">Hoodies</a></li>
+          <li><a href="../html/chamarras.html">Chamarras</a></li>
+          <li><a href= "../html/Pantalones.html">Pantalones</a></li>
+          <li><a href="../html/accesorioz.html">Accesorios</a></li>
+          <li><a href="../html/Registrarse.html">Registrarse</a></li>
+          <li><a href="../html/iniciarsesion.html">Iniciar Sesion</a></li>
+             <li><a href="../html/PAGO.html">Pago</a></li>
+           <li><a href="../html/listdedesesos.html">Lista de deseos</a></li>
+          <li><a href="../html/Carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<main class="contenedor">
+  <section class="form-contacto">
+    <h2>Envíanos un mensaje</h2>
+    <form action="enviar_contacto.php" method="POST">
+      <label>Nombre:</label>
+      <input type="text" name="nombre" required>
+
+      <label>Correo electrónico:</label>
+      <input type="email" name="correo" required>
+
+      <label>Asunto:</label>
+      <input type="text" name="asunto" required>
+
+      <label>Mensaje:</label>
+      <textarea name="mensaje" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <section class="info">
+    <h3>También puedes contactarnos en:</h3>
+    <p><strong>📍 Dirección:</strong> Av. Central #45, CDMX</p>
+    <p><strong>📧 Email:</strong> contacto@ziraphoodiez.com</p>
+    <p><strong>📞 Teléfono:</strong> +52 55 1234 5678</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Zirap Hoodiez. Todos los derechos reservados.</p>
+</footer>
+
+<script src="../js/modo.js"></script>
+</body>
+</html>

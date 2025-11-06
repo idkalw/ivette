@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Zirap-Hoodiez</title>
+  <link rel="stylesheet" href="../css/carrito.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>
+        <img src="../imagenes/ziraplogo3-removebg-preview.png" alt="Zirap-Hoodiez" class="logo">
+      </h1>
+
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <nav id="main-nav">
+        <ul>
+          <li> <a href="../html/zirap hoodiez maquerta.html">Inicio</a></li>
+          <li><a href="../html/hoodiez.html">Hoodies</a></li>
+          <li><a href="../html/chamarras.html">Chamarras</a></li>
+          <li><a href= "../html/Pantalones.html">Pantalones</a></li>
+          <li><a href="../html/accesorioz.html">Accesorios</a></li>
+          <li><a href="../html/contacto.html">Contacto</a></li>
+          <li><a href="../html/Registrarse.html">Registrarse</a></li>
+          <li><a href="../html/iniciarsesion.html">Iniciar Sesion</a></li>
+             <li><a href="../html/PAGO.html">Pago</a></li>
+          <li><a href="../html/Carrito.html">Carrito</a></li>
+         <li><a href="../html/listdedesesos.html">Lista de deseos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="titulo">🛒 Tu Carrito</h1>
+    <div id="carrito" class="carrito-contenedor"></div>
+    <div class="total-container">
+      <h2 id="total">Total: $0</h2>
+      <button id="vaciarCarrito" class="btn-vaciar">Vaciar Carrito</button>
+      <button id="vaciarCarrito" class="btn-vaciar">Comprar</button>
+    </div>
+  </main>
+
+  <script>
+    // Mostrar productos del carrito
+    function mostrarCarrito() {
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      let contenedor = document.getElementById("carrito");
+      let total = 0;
+
+      contenedor.innerHTML = "";
+
+      if (carrito.length === 0) {
+        contenedor.innerHTML = "<p class='vacio'>Tu carrito está vacío 🛍️</p>";
+        document.getElementById("total").innerText = "Total: $0";
+        return;
+      }
+
+      carrito.forEach((producto, index) => {
+        total += producto.precio;
+        contenedor.innerHTML += `
+          <div class="producto-card">
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-img">
+            <div class="producto-info">
+              <h3>${producto.nombre}</h3>
+              <p class="precio">$${producto.precio}</p>
+              <button class="btn-eliminar" onclick="eliminarDelCarrito(${index})">Eliminar ❌</button>
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById("total").innerText = "Total: $" + total.toFixed(2);
+    }
+
+    // Eliminar producto del carrito
+    function eliminarDelCarrito(index) {
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.splice(index, 1);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      mostrarCarrito();
+    }
+
+    // Vaciar todo el carrito
+    document.getElementById("vaciarCarrito").addEventListener("click", () => {
+      localStorage.removeItem("carrito");
+      mostrarCarrito();
+    });
+
+    // Menú responsive
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      document.getElementById("main-nav").classList.toggle("show");
+    });
+
+    mostrarCarrito();
+  </script>
+</body>
+</html>

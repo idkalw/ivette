@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Deseos - Zirap-Hoodiez</title>
+  <link rel="stylesheet" href="../css/pum.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>
+        <img src="../imagenes/ziraplogo3-removebg-preview.png" alt="Zirap-Hoodiez" class="logo">
+      </h1>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav id="main-nav">
+        <ul>
+                 <li> <a href="../html/zirap hoodiez maquerta.html">Inicio</a></li>
+          <li><a href="../html/hoodiez.html">Hoodies</a></li>
+          <li><a href="../html/chamarras.html">Chamarras</a></li>
+          <li><a href= "../html/Pantalones.html">Pantalones</a></li>
+          <li><a href="../html/accesorioz.html">Accesorios</a></li>
+          <li><a href="../html/contacto.html">Contacto</a></li>
+          <li><a href="../html/Registrarse.html">Registrarse</a></li>
+          <li><a href="../html/iniciarsesion.html">Iniciar Sesion</a></li>
+             <li><a href="../html/PAGO.html">Pago</a></li>
+          <li><a href="../html/Carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wishlist-container">
+    <h1> Tu Lista de Deseos</h1>
+    <div id="wishlist"></div>
+  </main>
+
+  <script>
+    function mostrarDeseos() {
+      const lista = JSON.parse(localStorage.getItem('deseos')) || [];
+      const contenedor = document.getElementById('wishlist');
+      if (lista.length === 0) {
+        contenedor.innerHTML = "<p class='vacio'>Tu lista de deseos está vacía :( </p>";
+        return;
+      }
+
+      contenedor.innerHTML = "";
+      lista.forEach((producto, index) => {
+        contenedor.innerHTML += `
+          <div class="producto">
+            <img src="${producto.imagen || '../imagenes/default.png'}" alt="${producto.nombre}">
+            <div class="info">
+              <h3>${producto.nombre}</h3>
+              <p>$${producto.precio}</p>
+              <button onclick="agregarAlCarrito(${index})">🛒 Agregar al carrito</button>
+              <button onclick="eliminarDeseo(${index})">❌ Eliminar</button>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function agregarAlCarrito(index) {
+      const deseos = JSON.parse(localStorage.getItem('deseos')) || [];
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push(deseos[index]);
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      alert(' Producto agregado al carrito');
+    }
+
+    function eliminarDeseo(index) {
+      const deseos = JSON.parse(localStorage.getItem('deseos')) || [];
+      deseos.splice(index, 1);
+      localStorage.setItem('deseos', JSON.stringify(deseos));
+      mostrarDeseos();
+    }
+
+    mostrarDeseos();
+  </script>
+</body>
+</html>

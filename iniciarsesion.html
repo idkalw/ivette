@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Zirap-Hoodiez</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../imagenes/zirapgrafitti-removebg-preview.png" type="image/png">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+      <h1>
+        <img src="../imagenes/ziraplogo3-removebg-preview.png" alt="Zirap-Hoodiez" class="logo">
+      </h1>
+
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <nav id="main-nav">
+        <ul>
+           <li> <a href="../html/zirap hoodiez maquerta.html">Inicio</a></li>
+          <li><a href="../html/hoodiez.html">Hoodies</a></li>
+          <li><a href="../html/chamarras.html">Chamarras</a></li>
+          <li><a href= "../html/Pantalones.html">Pantalones</a></li>
+          <li><a href="../html/accesorioz.html">Accesorios</a></li>
+          <li><a href="../html/contacto.html">Contacto</a></li>
+          <li><a href="../html/Registrarse.html">Registrarse</a></li>
+             <li><a href="../html/PAGO.html">Pago</a></li>
+           <li><a href="../html/listdedesesos.html">Lista de deseos</a></li>
+          <li><a href="../html/Carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="form-container">
+    <h1 class="title">Inicia Sesión</h1>
+    <form action="login.php" method="POST" class="form">
+      <div class="input-group">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+      </div>
+
+      <button type="submit" class="btn">Entrar</button>
+      <p class="alt-text">¿No tienes cuenta? <a href="../html/Registrarse.html">Regístrate aquí</a></p>
+      <button type="submit" class="btn"><a href="../html/zirap hoodiez maquerta.html">Regresar</a></button>
+    </form>
+  </div>
+</body>
+</html>

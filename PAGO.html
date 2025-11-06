@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pago - Zirap-Hoodiez</title>
+  <link rel="stylesheet" href="../css/pum.css">
+</head>
+<body>
+ <header>
+    <div class="header-container">
+      <h1>
+        <img src="../imagenes/ziraplogo3-removebg-preview.png" alt="Zirap-Hoodiez" class="logo">
+      </h1>
+
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <nav id="main-nav">
+        <ul>
+          <li> <a href="../html/zirap hoodiez maquerta.html">Inicio</a></li>
+          <li><a href="../html/hoodiez.html">Hoodies</a></li>
+          <li><a href="../html/chamarras.html">Chamarras</a></li>
+          <li><a href= "../html/Pantalones.html">Pantalones</a></li>
+          <li><a href="../html/accesorioz.html">Accesorios</a></li>
+          <li><a href="../html/contacto.html">Contacto</a></li>
+          <li><a href="../html/Registrarse.html">Registrarse</a></li>
+          <li><a href="../html/iniciarsesion.html">Iniciar Sesion</a></li>
+          <li><a href="../html/listdedesesos.html">Lista de deseos</a></li>
+          <li><a href="../html/Carrito.html">Carrito</a></li>
+         
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="checkout-container">
+    <h1>💳 Finalizar Compra</h1>
+    <form id="checkout-form">
+      <div class="form-section">
+        <h2>Información Personal</h2>
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="tel" placeholder="Teléfono" required>
+      </div>
+
+      <div class="form-section">
+        <h2>Dirección de Envío</h2>
+        <input type="text" placeholder="Calle y número" required>
+        <input type="text" placeholder="Colonia" required>
+        <input type="text" placeholder="Ciudad" required>
+        <input type="text" placeholder="Código Postal" required>
+      </div>
+
+      <div class="form-section">
+        <h2>Método de Pago</h2>
+        <select required>
+          <option value="">Selecciona un método</option>
+          <option>Tarjeta de Crédito</option>
+          <option>Tarjeta de Débito</option>
+          <option>PayPal</option>
+          <option>Pago contra entrega</option>
+        </select>
+        <input type="text" placeholder="Número de tarjeta" required>
+        <input type="text" placeholder="Fecha de expiración (MM/AA)" required>
+        <input type="text" placeholder="CVV" required>
+      </div>
+
+      <button type="submit" class="btn-pago">Pagar Ahora</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('checkout-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('✅ Pago procesado con éxito. ¡Gracias por tu compra en Zirap-Hoodiez!');
+      localStorage.removeItem('carrito');
+      window.location.href = '../html/hoodiez.html';
+    });
+  </script>
+</body>
+</html>
