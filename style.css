@@ -1,0 +1,335 @@
+/* ===========================
+   🌗 MODO OSCURO / CLARO
+   =========================== */
+
+/* 🎨 Colores base (modo oscuro por defecto) */
+:root {
+  --fondo: #1e1e1e;
+  --texto: #f0f0f0;
+  --fondo-header: #2b2b2b;
+  --borde: rgba(230,6,115,0.12);
+  --acento: #E60073;
+  --fondo-card: #2b2b2b;
+  --fondo-footer: #000;
+}
+
+header {
+  background-color: #2b2b2b;
+  border-bottom: 3px solid rgba(230,6,115,0.12);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  border-radius: 0 0 20px 20px;
+  padding: 8px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 220px; /* 🔥 Logo más grande */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle.open {
+  transform: rotate(90deg);
+}
+
+/* ======= NAV (desktop) ======= */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+  color: #E60073;
+  text-shadow: 0 0 10px #E60073;
+}
+/* 🌞 Modo claro */
+body.claro {
+  --fondo: #ffffff;
+  --texto: #111111;
+  --fondo-header: #f7f7f7;
+  --borde: rgba(230,6,115,0.2);
+  --acento: #E60073;
+  --fondo-card: #ffffff;
+  --fondo-footer: #f0f0f0;
+}
+
+/* ===========================
+   ESTILOS GENERALES
+   =========================== */
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ======= HEADER ======= */
+header {
+  background-color: var(--fondo-header);
+  border-bottom: 3px solid var(--borde);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  border-radius: 0 0 20px 20px;
+  padding: 8px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.4s ease;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ======= BOTÓN DE MODO ======= */
+#modoToggle {
+  background-color: var(--acento);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#modoToggle:hover {
+  background-color: #ff4081;
+  box-shadow: 0 0 10px var(--acento);
+}
+
+/* ======= NAV ======= */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--texto);
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle.open {
+  transform: rotate(90deg);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--acento);
+  text-shadow: 0 0 10px var(--acento);
+}
+
+/* ======= BIENVENIDA ======= */
+.bienvenida {
+  background-color: var(--fondo-card);
+  border: 2px solid var(--borde);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  transition: background 0.4s;
+}
+
+.bienvenida h2 {
+  color: var(--acento);
+}
+
+.bienvenida p {
+  color: var(--texto);
+  font-size: 18px;
+}
+
+/* ======= MODELOS ======= */
+#modelos-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.model-card {
+  background-color: var(--fondo-card);
+  border: 2px solid var(--borde);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  transition: 0.3s ease;
+}
+
+.model-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.7), 0 0 28px rgba(230,6,115,0.08);
+}
+
+.model-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.model-card h3 {
+  color: var(--acento);
+  margin-top: 12px;
+}
+
+.model-card ul {
+  list-style: none;
+  padding-left: 0;
+  color: var(--texto);
+  text-align: left;
+  font-size: 14px;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  margin-top: 60px;
+  padding: 15px;
+  font-size: 0.9em;
+  color: var(--texto);
+  background-color: var(--fondo-footer);
+  border-top: 2px solid var(--borde);
+  transition: background 0.4s ease;
+}
+
+/* ======= MOBILE MENU ======= */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    display: none;
+    background: var(--fondo-header);
+    border-top: 2px solid var(--borde);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 0;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .logo {
+    width: 180px;
+  }
+}
+
+/* ======= Extra pequeño (menos de 500px) ======= */
+@media (max-width: 500px) {
+  #modelos-section {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .model-card {
+    padding: 15px;
+  }
+
+  .bienvenida {
+    padding: 20px;
+  }
+
+  .bienvenida h2 {
+    font-size: 20px;
+  }
+
+  .bienvenida p {
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 160px;
+  }
+}
