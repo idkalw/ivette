@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zirap-Hoodiez</title>
+  <link rel="stylesheet" href="../css/accesorioz.css">
+</head>
+<body>
+ 
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2> Descuentos Especiales </h2>
+      <p>Aprovecha hasta <span>-30%</span> en accesorios seleccionados.</p>
+      <div class="popup-items">
+        <div class="popup-item">
+          <img src="../imagenes/IMG-20251030-WA0141.jpg" alt="Dc shoes">
+          <p><b>Dc Shoes</b><br>$1200 MXN</p>
+        </div>
+        <div class="popup-item">
+          <img src="../imagenes/IMG-20251030-WA0137.jpg" alt="Jordan 4">
+          <p><b>Jordan 4</b><br>$2220 MXN</p>
+        </div>
+      </div>
+      <button class="btn btn-buy" onclick="cerrarPopup()">Ver Catálogo</button>
+    </div>
+  </div>
+  <!--HEADER-->
+     <header>
+    <div class="header-container">
+      <h1>
+        <img src="../imagenes/ziraplogo3-removebg-preview.png" alt="Zirap-Hoodiez" class="logo">
+      </h1>
+
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <nav id="main-nav">
+        <ul>
+            <li> <a href="../html/zirap hoodiez maquerta.html">Inicio</a></li>
+          <li><a href="../html/hoodiez.html">Hoodies</a></li>
+          <li><a href="../html/chamarras.html">Chamarras</a></li>
+          <li><a href= "../html/Pantalones.html">Pantalones</a></li>
+          <li><a href="../html/accesorioz.html">Accesorios</a></li>
+          <li><a href="../html/contacto.html">Contacto</a></li>
+          <li><a href="../html/Registrarse.html">Registrarse</a></li>
+          <li><a href="../html/iniciarsesion.html">Iniciar Sesion</a></li>
+             <li><a href="../html/PAGO.html">Pago</a></li>
+              <li><a href="../html/listdedesesos.html">Lista de deseos</a></li>
+          <li><a href="../html/Carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+
+  <!-- Catálogo -->
+  <div class="wrap">
+    <div class="catalog">
+      
+      <div class="card">
+        <div class="badge">Descuento</div>
+        <div class="img-wrap">
+          <img src="../imagenes/IMG-20251030-WA0141.jpg" alt="Gorra">
+        </div>
+        <h3>Dc Shoes</h3>
+        <div class="meta">
+          <div class="price">$1280 MXN</div>
+          <div class="tag">Streetwear</div>
+        </div>
+        <p class="desc">Zapas comodas.</p>
+        <div class="actions">
+          <button class="btn btn-buy">Comprar</button>
+          <button class="btn btn-view">Ver</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Oferta</div>
+        <div class="img-wrap">
+          <img src="../imagenes/IMG-20251030-WA0140.jpg" alt="Lentes">
+        </div>
+        <h3>Dc shoes coirt</h3>
+        <div class="meta">
+          <div class="price">1799 MXN</div>
+          <div class="tag">Shoes</div>
+        </div>
+        <p class="desc">Zapas Comodas</p>
+        <div class="actions">
+          <button class="btn btn-buy">Comprar</button>
+          <button class="btn btn-view">Ver</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Limitado</div>
+        <div class="img-wrap">
+          <img src="../imagenes/IMG-20251030-WA0136.jpg" alt="Mochila">
+        </div>
+        <h3>Nike Panda Mid</h3>
+        <div class="meta">
+          <div class="price">$1750 MXN</div>
+          <div class="tag">Edición Especial</div>
+        </div>
+        <p class="desc">Mochila resistente con detalles reflectivos estilo neon-glass.</p>
+        <div class="actions">
+          <button class="btn btn-buy">Comprar</button>
+          <button class="btn btn-view">Ver</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Descuento</div>
+        <div class="img-wrap">
+          <img src="../imagenes/IMG-20251030-WA0137.jpg" alt="Pulsera">
+        </div>
+        <h3>Jordan 4</h3>
+        <div class="meta">
+          <div class="price">$2220 MXN</div>
+          <div class="tag">Accesorio</div>
+        </div>
+        <p class="desc">Jordan 4 Black .</p>
+        <div class="actions">
+          <button class="btn btn-buy">Comprar</button>
+          <button class="btn btn-view">Ver</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+window.onload = function() {
+  const popup = document.getElementById("popup");
+  popup.classList.add("show"); // Agrega la clase que activa animación
+};
+
+function cerrarPopup() {
+  const popup = document.getElementById("popup");
+  popup.classList.remove("show"); // Quita la animación y oculta
+  setTimeout(() => {
+    popup.style.display = "none"; // Después de quitar animación, ocultar
+  }, 500); // 500ms = duración de la animación
+}
+</script>
+</body>
+</html>
